@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,600');
 
 /* 
-light #17252a
+light #def2f1
 dark #17252a
 secondary #2b7a78
 third #3aafa9
@@ -20,11 +20,15 @@ third #3aafa9
 }
 
 .body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.3rem;
   font-weight: 600;
+  width: 100%;
+  height: 100%;
   letter-spacing: 1.6px;
-  color: #17252a;
+  color: #000;
   background: #3aafa9;
 }
 a {
@@ -47,8 +51,8 @@ a:hover {
   transition: all 250ms ease-out;
 }
 .btn:hover {
-  background: #3aafa9;
-  color: #17252a;
+  background: #17252ac9;
+  color: #def2f1;
   transition: all 250ms ease-out;
 }
 .b-radius {
@@ -59,6 +63,7 @@ a:hover {
   display: flex;
   background: #17252a;
   color: #f2cbbc;
+  font-size: 1.8rem;
 }
 .navlist {
   display: flex;
@@ -91,9 +96,10 @@ a:hover {
   display: flex;
   justify-content: center;
   text-transform: capitalize;
+  text-align: center;
   color: #def2f1;
   font-size: 2.9rem;
-  margin: 2rem auto 1rem;
+  margin: 3rem auto 1rem;
 }
 /* cards */
 .cards {
@@ -111,7 +117,6 @@ a:hover {
   max-height: 90vh;
   min-height: min-content;
   height: 50vh;
-  max-width: 50vw;
   margin: 0 auto;
 }
 .card-header {
@@ -119,7 +124,7 @@ a:hover {
 }
 .card-img {
   min-width: 12.5rem;
-  max-width: 30vw;
+  max-width: 25vw;
   margin: 0 auto;
 }
 .card-btn {
@@ -161,6 +166,7 @@ a:hover {
 }
 .modal-btn:hover {
   animation: spin 0.5s ease-in-out;
+  color: #3aafa9;
 }
 @keyframes spin {
   100% {
@@ -246,12 +252,13 @@ a:hover {
   flex-direction: column;
 }
 .sidebar-content > div {
+  color: #17252a;
   padding: 1rem;
   cursor: pointer;
   width: max-content;
 }
 .sidebar-content > div:hover {
-  color: #def2f1;
+  color: #2b7a78;
   cursor: pointer;
 }
 .sidebar-arrow-r {
@@ -268,6 +275,9 @@ a:hover {
   padding: 1rem;
 }
 /* guitar sections */
+.tele-section {
+  height: 100vh;
+}
 .tele-container {
   margin: 10vh 5vw 0;
   display: grid;
@@ -299,46 +309,78 @@ a:hover {
   transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
   cursor: pointer;
 }
-
+/* About */
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem 10vw;
   text-align: center;
+  height: 90vh;
 }
 .about h1 {
   margin-bottom: 1rem;
 }
-.contact {
+.about-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.about-content {
   display: flex;
-  height: 10vh;
+  align-items: flex-start;
+}
+.about-img {
+  max-width: 40vw;
+  max-height: 40vh;
+  margin: 0 4vw 5vh;
 }
 .logo img {
   margin: 3rem auto;
   max-height: 10vh;
 }
-.contact > * {
-  margin: 0 1rem;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background: #17252a;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
-.contact > * {
-  transition: all 0.2s ease-out;
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  color: #def2f1;
 }
-.contact > *:hover {
-  color: #184644;
-  transition: all 0.2s ease-out;
-  font-size: 2.9rem;
+.footer > :nth-child(-n + 3) {
+  border-right: 1px solid #def2f1;
 }
+.footer-content > *:hover {
+  color: #3aafa9;
+  font-size: 6vh;
+}
+
 @media screen and (max-width: 900px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2.1rem;
+  }
   .navlist > * {
     padding: 1rem;
+    font-size: 1.8rem;
   }
-
   .modal {
     font-size: 1rem;
   }
   .modal-btn {
     padding: 0 0.8rem;
+  }
+  .card {
+    max-width: 50vw;
   }
   .img-wrapper {
     display: flex;
