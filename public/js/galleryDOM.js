@@ -1,13 +1,10 @@
+// active tab
+document.getElementById('gallery-tab').classList.add('active');
 // sidebar
 const teleClick = document.getElementById('tele-click');
 const jazzClick = document.getElementById('jazz-click');
 const jagClick = document.getElementById('jag-click');
 const mustangClick = document.getElementById('mustang-click');
-// display case
-const guitar1 = document.getElementById('guitar1');
-const guitar2 = document.getElementById('guitar2');
-const guitar3 = document.getElementById('guitar3');
-//
 
 const slide = document.getElementById('slide');
 const gallery = document.getElementById('gallery');
@@ -20,7 +17,7 @@ var j = 0;
 function changeImg() {
   const currFolder = `../media/fender/${folders[j]}`;
   slide.src = `${currFolder}/${images[i]}`;
-
+  slide.alt = `${folders[j]}`;
   if (i < images.length - 1) {
     i++;
   } else {
@@ -35,6 +32,9 @@ function currFolder(i) {
   guitar1.src = `../media/fender/${folders[i]}/1.png`;
   guitar2.src = `../media/fender/${folders[i]}/2.png`;
   guitar3.src = `../media/fender/${folders[i]}/3.png`;
+  guitar1.alt = `${folders[i]}`;
+  guitar2.alt = `${folders[i]}`;
+  guitar3.alt = `${folders[i]}`;
 
   slide.src = `../media/fender/${folders[j]}/${images[i]}`;
 }

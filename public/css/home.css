@@ -32,22 +32,23 @@ a {
   color: #3aafa9;
 }
 a:hover {
-  color: #2b7a78;
+  color: #def2f1;
   transition: all 0.3s ease-out;
 }
 
 .btn {
+  font-family: 'Cormorant Garamond', serif;
   border: 2px solid #2b7a78;
   padding: 0.7rem 1.4em;
   margin: 1rem 0;
   font-size: 1rem;
-  background: transparent;
-  color: #17252a;
+  background: #17252a;
+  color: #def2f1;
   transition: all 250ms ease-out;
 }
 .btn:hover {
-  background: #17252a;
-  color: #3aafa9;
+  background: #3aafa9;
+  color: #17252a;
   transition: all 250ms ease-out;
 }
 .b-radius {
@@ -69,6 +70,9 @@ a:hover {
 .navlist > * {
   padding: 1rem 4rem;
 }
+.active {
+  color: #def2f1;
+}
 /***** Index *****/
 .section {
   display: flex;
@@ -87,9 +91,9 @@ a:hover {
   display: flex;
   justify-content: center;
   text-transform: capitalize;
-  color: #17252a;
-  font-size: 1.7rem;
-  margin: 1rem auto;
+  color: #def2f1;
+  font-size: 2.9rem;
+  margin: 2rem auto 1rem;
 }
 /* cards */
 .cards {
@@ -128,7 +132,6 @@ a:hover {
 /* modals */
 .modal {
   display: none;
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -142,7 +145,7 @@ a:hover {
   background-color: rgba(23, 37, 42, 0.6);
 }
 .modal-container {
-  color: #3aafa9;
+  color: #def2f1;
   margin: 40vh 20vw;
   border: 2px solid #17252a;
   padding: 2rem;
@@ -150,7 +153,7 @@ a:hover {
 }
 .modal-header {
   display: flex;
-  color: #3aafa9;
+  color: #def2f1;
   margin-bottom: 1rem;
 }
 .modal-btn {
@@ -226,7 +229,7 @@ a:hover {
 .sidebar {
   top: 10rem;
   position: fixed;
-  background: #3aafa9;
+  background: #def2f1;
   color: #17252a;
   filter: drop-shadow(1px 1px 2px #2b7a78);
   border-top-right-radius: 5px;
@@ -248,7 +251,7 @@ a:hover {
   width: max-content;
 }
 .sidebar-content > div:hover {
-  color: #2b7a78;
+  color: #def2f1;
   cursor: pointer;
 }
 .sidebar-arrow-r {
@@ -270,11 +273,17 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 }
+.tele-header {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 3rem;
+  font-size: 2.9rem;
+}
 .img-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10rem 0;
+  padding: 0;
 }
 .tele-container > .img-wrapper > .guitar {
   width: 100%;
@@ -282,6 +291,7 @@ a:hover {
   border: 2px solid #17252a;
   padding: 5rem 0;
   background: rgba(23, 37, 42, 0.4);
+  transition: all 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
 .tele-container > .img-wrapper > .guitar:hover {
@@ -315,21 +325,25 @@ a:hover {
   transition: all 0.2s ease-out;
 }
 .contact > *:hover {
-  color: #2b7a78;
+  color: #184644;
   transition: all 0.2s ease-out;
-  font-size: 3.1rem;
+  font-size: 2.9rem;
 }
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   .navlist > * {
     padding: 1rem;
   }
-  .section {
-    margin: 0 1rem;
-  }
+
   .modal {
     font-size: 1rem;
   }
   .modal-btn {
     padding: 0 0.8rem;
+  }
+  .img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
   }
 }

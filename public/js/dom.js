@@ -1,3 +1,6 @@
+// active tab
+document.getElementById('home-tab').classList.add('active');
+//
 const cardBtn = document.querySelectorAll('.card-btn');
 const closeBtn = document.querySelectorAll('.modal-btn');
 const modal = document.getElementById('modal');
